@@ -1,12 +1,12 @@
-import { Homepage, AboutUs, Library, Courses, SignIn, SignUp } from './containers';
-import { Navbar, Footer } from './components'
+import { Homepage, AboutUs, Library, Courses } from './containers';
+import { Navbar, Footer, SignIn, SignUp } from './components'
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
 
 const App = () => {
   return (
-    <div  className='App '>
+    <div  className='App'>
         <Navbar />   
         <Routes>
         {/* recall to put an id==about statement in every container and the aboutUs link */}
@@ -17,6 +17,8 @@ const App = () => {
           <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
         </Routes>
+        <SignIn />
+        <SignUp />
         <Footer />
     </div>
   );
