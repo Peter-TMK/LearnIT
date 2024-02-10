@@ -2,12 +2,24 @@ import './signIn.css';
 import { Link } from 'react-router-dom';
 import { openEye, google, github, facebook } from '../../assets'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { IoIosClose } from "react-icons/io";
+import { useState } from 'react';
 
-const SignIn = () => {
+// eslint-disable-next-line react/prop-types
+const SignIn = ({ onClose }) => { 
+  const [toggleSigninCard, setToggleSigninCard] = useState(true);
+
   return (
     <div className='sign__in-container'>
+    {toggleSigninCard && (
       <div className='signin__card'>
-        <form>
+        <form id='signin__form'>
+          <div className="closeBtn">
+            <IoIosClose className='close__btn' onClick={()=>{
+              setToggleSigninCard(false);
+              onClose();
+            }} />
+          </div>
           <h1>LOGIN</h1>
           <div className='email'>
             <input
@@ -56,7 +68,8 @@ const SignIn = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div>)
+    }
     </div>
   );
 };

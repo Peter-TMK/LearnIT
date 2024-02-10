@@ -7,8 +7,8 @@ import '../../App.css';
 
 const HeroPage = () => {
   return (
-    <div className='lms__header section__padding' id='home'>
-      <div className='lms__header-content'>
+    <div className='hero section__padding hero' id='home'>
+      <div className='hero-content'>
         <h1 className='gradient__text'>
           Lorem ipsum dolor sit amet consect worked!
         </h1>
@@ -16,16 +16,16 @@ const HeroPage = () => {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
           doloribus facilis minima exercitationem recusandae.
         </p>
-        <div className='lms__header-content__input'>
-          <input type='input' placeholder='choose a course' />
+        <div className='hero-content__input'>
+          <input type='input' name='choose-a-course' placeholder='choose a course' />
           <button type='button'>Get Started</button>
         </div>
-        <div className='lms__header-content__people'>
+        <div className='hero-content__people'>
           <LazyLoadImage src={people} alt='people' effect='opacity'/>
           <p>1600 people requested access</p>
         </div>
       </div>
-      <div className='lms__header-image'>
+      <div className='hero-image'>
         <LazyLoadImage src={possibility} alt='ai' effect='blur'/>
       </div>
       <div className='color__Tester'></div>

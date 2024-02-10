@@ -1,5 +1,5 @@
 import { Homepage, AboutUs, Library, Courses } from './containers';
-import { Navbar, Footer, SignIn, SignUp } from './components'
+import { Navbar, Footer } from './components'
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
@@ -14,11 +14,7 @@ const App = () => {
           <Route path='/about' element={<AboutUs />} />
           <Route path='/courses' element={<Courses />} />
           <Route path='/library' element={<Library />} />
-          <Route path='/signin' element={<SignIn />} />
-          <Route path='/signup' element={<SignUp />} />
         </Routes>
-        <SignIn />
-        <SignUp />
         <Footer />
     </div>
   );

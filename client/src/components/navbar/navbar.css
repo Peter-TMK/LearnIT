@@ -4,6 +4,7 @@
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 1;
 
   padding: 2rem 6rem;
   transition: all 0.2s ease;
@@ -49,10 +50,16 @@
 
   margin: 0 1rem;
   cursor: pointer;
+  transition: color .25s ease-in, text-decoration .3s ease-out;
+}
+.lms__navbar-links_container p:hover,
+.lms__navbar-sign p:hover,
+.lms__navbar-menu_container p:hover {
+  color: #fff;
+  text-decoration: underline var(--bgcolor-cta) 2px;
 }
 
-.lms__navbar-sign button,
-.lms__navbar-menu_container button {
+.lms__navbar-sign button {
   padding: 0.5rem 1rem;
   color: #fff;
   background: var(--bgcolor-cta);
@@ -64,6 +71,11 @@
   outline: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: all .25s ease-in-out;
+}
+.lms__navbar-sign button:hover {
+  background: #fff;
+  color: var(--bgcolor-cta);
 }
 
 .lms__navbar-menu {
