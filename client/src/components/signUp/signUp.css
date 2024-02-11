@@ -50,6 +50,11 @@ form {
 .close__btn {
   font-size: 30px;
   filter: invert(60%);
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+.close__btn:hover {
+  transform: scale(1.2);
 }
 .password__card,
 .email {
