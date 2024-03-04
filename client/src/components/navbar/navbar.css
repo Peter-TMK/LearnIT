@@ -5,12 +5,11 @@
   position: sticky;
   top: 0;
   z-index: 1;
-
   padding: 2rem 6rem;
   transition: all 0.2s ease;
 }
 .lms__navbar.gradient__bg {
-  background: var(--color-footer);
+  background: var(--color-bg1);
 }
 
 .lms__navbar-links {
@@ -20,13 +19,12 @@
   align-items: center;
 }
 .lms__navbar-links_logo {
-    margin-right: 3rem;
-} 
+  margin-right: 3rem;
+}
 /* .lms__navbar-links_logo img {
     width: 62.56px;
     height: 16.02px;
 } */
-
 .lms__navbar-links_container {
   display: flex;
   flex-direction: row;
@@ -47,21 +45,25 @@
   font-size: 18px;
   line-height: 25px;
   text-transform: capitalize;
-
+  display: block;
   margin: 0 1rem;
   cursor: pointer;
-  transition: color .25s ease-in, text-decoration .3s ease-out;
+  transition: all 0.25s ease;
 }
 .lms__navbar-links_container p:hover,
 .lms__navbar-sign p:hover,
 .lms__navbar-menu_container p:hover {
-  color: #fff;
-  text-decoration: underline var(--bgcolor-cta) 2px;
+  color: var(--white);
+  transform: translateY(-3px) translateX(3px);
 }
-
+.lms__navbar-links_container p:hover:after,
+.lms__navbar-sign p:hover:after,
+.lms__navbar-menu_container p:hover:after {
+  width: 100%;
+}
 .lms__navbar-sign button {
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: var(--white);
   background: var(--bgcolor-cta);
   font-family: var(--font-family);
   font-weight: 500;
@@ -71,16 +73,15 @@
   outline: none;
   cursor: pointer;
   border-radius: 5px;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .lms__navbar-sign button:hover {
-  background: #fff;
+  background: var(--white);
   color: var(--bgcolor-cta);
 }
 
 .lms__navbar-menu {
   margin-left: 1rem;
-
   display: none;
   position: relative;
 }
@@ -93,9 +94,8 @@
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
-
   text-align: end;
-  background: var(--color-footer);
+  background: var(--color-bg1);
   padding: 2rem;
   position: absolute;
   right: 0;
@@ -113,7 +113,7 @@
 }
 .logo {
   font-size: 2.5rem;
-  color: dodgerblue;
+  color: var(--color-primary-text);
   font-weight: 700;
 }
 @media screen and (max-width: 1050px) {

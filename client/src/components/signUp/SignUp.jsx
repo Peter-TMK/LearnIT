@@ -1,20 +1,42 @@
+import PropTypes from 'prop-types';
+
 import './signUp.css';
 import { Link } from 'react-router-dom';
 import { google, github, facebook, closeEye, openEye } from '../../assets';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { IoIosClose } from 'react-icons/io';
 import { useState } from 'react';
+import axios from 'axios'; // Import Axios
 
 // eslint-disable-next-line react/prop-types
 const SignUp = ({ onClose }) => {
   const [toggleSignupCard, setToggleSignupCard] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        'http://localhost:4000/api/auth/signup',
+        {
+          email,
+          password,
+        }
+      );
+      console.log(response.data); // Handle successful signup
+    } catch (error) {
+      setError(error.response.data.message); // Handle error
+    }
+  };
 
   return (
     <div className='sign__up-container'>
       {toggleSignupCard && (
         <div className='signup__card '>
-          <form id='signup__form'>
+          <form id='signup__form' onSubmit={handleSignUp}>
             <div className='closeBtn'>
               <IoIosClose
                 className='close__btn'
@@ -25,12 +47,15 @@ const SignUp = ({ onClose }) => {
               />
             </div>
             <h1>REGISTER</h1>
+            {error && <div className="error">{error}</div>}
             <div className='email'>
               <input
                 type='email'
                 name='email'
                 id='email'
                 placeholder='Email'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -40,6 +65,8 @@ const SignUp = ({ onClose }) => {
                 name='password'
                 id='password'
                 placeholder='Password'
+                value={password}
+                onChange={(e)=> setPassword(e.target.value)}
                 required
               />
               <LazyLoadImage
@@ -80,6 +107,10 @@ const SignUp = ({ onClose }) => {
       )}
     </div>
   );
+};
+
+SignUp.propTypes = {
+  onClose: PropTypes.func.isRequired, // Validate onClose prop as a function
 };
 
 export default SignUp;

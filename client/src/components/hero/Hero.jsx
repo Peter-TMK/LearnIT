@@ -7,7 +7,7 @@ import '../../App.css';
 
 const HeroPage = () => {
   return (
-    <div className='hero section__padding hero' id='home'>
+    <div className='section__padding hero'>
       <div className='hero-content'>
         <h1 className='gradient__text'>
           Lorem ipsum dolor sit amet consect worked!
@@ -28,7 +28,6 @@ const HeroPage = () => {
       <div className='hero-image'>
         <LazyLoadImage src={possibility} alt='ai' effect='blur'/>
       </div>
-      <div className='color__Tester'></div>
     </div>
   );
 };

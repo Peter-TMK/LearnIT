@@ -1,0 +1,13 @@
+@media screen and (max-width:1050px){
+    .main__container{background-color: white;}
+  
+    @media screen and (max-width:768px){   
+      .main__container{background-color: yellow;}
+        
+      @media screen and (max-width:490px){
+        .main__container{background-color: purple;}
+          
+      }
+    }
+  }
+  

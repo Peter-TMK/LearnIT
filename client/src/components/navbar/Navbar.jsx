@@ -4,17 +4,20 @@ import './navbar.css';
 import '../../App.css';
 import { Link } from 'react-router-dom';
 import SignIn from '../signIn/SignIn';
-import SignUp from "../signUp/SignUp"
+import SignUp from "../signUp/SignUp";
+import { Breadcrumbs } from '@mui/material';
 
 
 const Menu = () => (
   <>
+    <Breadcrumbs/>  
     <p>
      <Link to='/'>Home</Link>
     </p>
     <p>
       <a href='#about'>About</a>
     </p>
+    <p>Explore</p>
     <p>
       <a href='#contact'>Contact</a>
     </p>
@@ -59,7 +62,7 @@ const Navbar = () => {
       <div className='lms__navbar'>
         <div className='lms__navbar-links'>
           <div className='lms__navbar-links_logo'>
-            <h1 className='logo'>PKtech</h1>
+          <Link to='/'><h1 className='logo'>PKtech</h1></Link>
           </div>
           <div className='lms__navbar-links_container'>
             <Menu />
@@ -69,7 +72,7 @@ const Navbar = () => {
           <p onClick={()=>{
               setToggleSigninCard(!toggleSigninCard)
               setToggleSignupCard(false)
-          }}>Sign in</p>
+          }}>Log in</p>
           <button type='button' onClick={()=>{
             setToggleSignupCard(!toggleSignupCard)
             setToggleSigninCard(false)
@@ -94,9 +97,15 @@ const Navbar = () => {
               <div className='lms__navbar-menu_container-links'>
                 <Menu />
               </div>
-              <div className='lms__navbar-menu_container-links-sign'>
-                <p>Sign in</p>
-                <button type='button'>Sign up</button>
+              <div className='lms__navbar-menu_container-links-sign lms__navbar-sign'>
+                <p onClick={()=>{
+                      setToggleSigninCard(!toggleSigninCard)
+                      setToggleSignupCard(false)
+                    }}>Log in</p>
+                <button type='button' onClick={()=>{
+                      setToggleSignupCard(!toggleSignupCard)
+                      setToggleSigninCard(false)
+                    }}>Sign up</button>
               </div>
             </div>
           )}

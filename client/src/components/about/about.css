@@ -1,0 +1,295 @@
+.main__container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg1);
+}
+.about__container {
+  width: 100%;
+}
+#about {
+  height: 27px;
+}
+.about__us-header h2 {
+  color: var(--color-secondary-text);
+  font-size: 3rem;
+  padding: 1em 2em 0.4em;
+}
+.containers {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1em 5.5em 10em;
+}
+.left__container {
+  min-width: 255px;
+  width: 45%;
+  background: var(--color-bg2);
+  margin: 7px;
+  border-radius: 15px;
+  padding: 2em 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+.left__container:hover {
+  transform: scale(0.98);
+}
+.left__container-text {
+  width: 50%;
+  padding: 0 2em;
+}
+.left__container-text p {
+  color: var(--color-secondary-text);
+  font-weight: 500;
+  font-size: 18px;
+}
+.left__container-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.left__container-image img {
+  width: 60%;
+  height: 280px;
+  border-radius: 20px;
+  margin-right: -20px;
+  margin-bottom: -20px;
+  object-fit: cover;
+}
+.left__container-image button {
+  padding: 12px 10px;
+  outline: 0;
+  border: 0;
+  margin: 4em;
+  background: var(--bgcolor-cta);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.left__container-image button:hover {
+  background: var(--white);
+  color: var(--bgcolor-cta);
+}
+.container {
+  flex: 1;
+  min-width: 150px;
+  /* width: 30%; */
+  margin: 7px;
+  border-radius: 10px;
+  padding: 0 0 2em 2em;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 3px 8px 10px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease;
+}
+.container:hover {
+  transform: scale(0.98);
+}
+.container-text {
+  padding-right: 3em;
+}
+.mid {
+  background: var(--bgcolor-cta);
+}
+.mid p {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--white);
+}
+.mid__container-image {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+}
+.mid__container-image img {
+  width: 80%;
+  height: 250px;
+  border-radius: 20px;
+  margin-top: -1em;
+  margin-right: 1em;
+  object-fit: cover;
+}
+.right {
+  background: var(--white);
+  overflow: hidden;
+}
+.right__container-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+  transform: rotate(20deg);
+  margin-bottom: -15em;
+  border-radius: 20px;
+}
+.right__container-image img {
+  width: 80%;
+  height: 170px;
+  margin-right: -2em;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.right p {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--bgcolor-cta);
+  padding-top: 2em;
+}
+.right img {
+  width: 100%;
+}
+.heartbeat {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .containers {
+    padding-bottom: 3.5em;
+  }
+  .left__container {
+    width: 100%;
+  }
+  .about__us-header h2 {
+    padding: 0.5em 2em;
+  }
+
+  @media screen and (max-width: 650px) {
+    .about__container {
+      padding: 0 1em 2em;
+    }
+    .containers {
+      flex-direction: column;
+    }
+    .left__container-text {
+      width: 100%;
+      margin-bottom: 1.5em;
+    }
+    .left__container-image {
+      justify-content: center;
+    }
+    .left__container-image img {
+      width: 65%;
+    }
+    .left__container-image button {
+      width: 55%;
+    }
+    .left__container,
+    .container {
+      margin-bottom: 30px;
+    }
+    .mid p {
+      margin: 10px 0;
+    }
+    .right {
+      padding: 0em 2em 0em;
+    }
+    .right p {
+      margin-bottom: 5px;
+    }
+    .right__container-image {
+      margin: 4em 4em 0;
+    }
+    .right__container-image img {
+      height: 100%;
+    }
+
+    @media screen and (max-width: 490px) {
+      .containers {
+        padding: 0 25px 0px 10px;
+      }
+      #about {
+        height: 2em;
+      }
+      .about__us-header h2 {
+        padding: 0 0 20px;
+        text-align: center;
+        font-size: 2.5em;
+      }
+    }
+  }
+}

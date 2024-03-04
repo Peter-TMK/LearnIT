@@ -3,11 +3,10 @@ import { Navbar, Footer } from './components'
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
-
 const App = () => {
   return (
     <div  className='App'>
-        <Navbar />   
+        <Navbar /> 
         <Routes>
         {/* recall to put an id==about statement in every container and the aboutUs link */}
           <Route path='/' element={<Homepage />} />
